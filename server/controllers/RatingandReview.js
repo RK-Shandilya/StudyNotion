@@ -15,7 +15,7 @@ exports.createRating = async (req, res) => {
                                     {_id:courseId,
                                     studentsEnrolled: {$elemMatch: {$eq: userId} },
                                 });
-
+        console.log(courseDetails);
         if(!courseDetails) {
             return res.status(404).json({
                 success:false,

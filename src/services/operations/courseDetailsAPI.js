@@ -372,6 +372,7 @@ export const createRating = async (data, token) => {
     const response = await apiConnector("POST", CREATE_RATING_API, data, {
       Authorization: `Bearer ${token}`,
     })
+    console.log("response",response)
     console.log("CREATE RATING API RESPONSE............", response)
     if (!response?.data?.success) {
       throw new Error("Could Not Create Rating")
