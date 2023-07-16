@@ -22,11 +22,7 @@ database.connect();
 app.use(express.json());
 app.use(cookieParser());
 app.use(
-	cors({
-		origin: 'https://study-notion-frontend-azure.vercel.app',
-    methods: 'GET,POST,PUT,DELETE',
-    allowedHeaders: 'Content-Type,Authorization',
-	})
+	cors()
 )
 
 app.use(
