@@ -23,8 +23,9 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(
 	cors({
-		origin:"http://localhost:3000",
-		credentials:true,
+		origin: 'https://study-notion-frontend-azure.vercel.app',
+    methods: 'GET,POST,PUT,DELETE',
+    allowedHeaders: 'Content-Type,Authorization',
 	})
 )
 
